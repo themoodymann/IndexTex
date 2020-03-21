@@ -20,8 +20,8 @@ for file in glob.glob("*.tex"):
             print(indexWord)
             newText = newText + texFile[last:end + 1] + "\\index{" + indexWord + "}"
             last = end+1
-    newText = newText + texFile[last:]
-    texFile = newText
+        newText = newText + texFile[last:]
+        texFile = newText
     with open("../output/"+file, "w") as writefile:
         writefile.write(texFile)
 
